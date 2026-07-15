@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #002810;
+    font-family: 'Cascadia Code', 'Consolas', 'Courier New', Courier, monospace;
+    color:#e7f6e4;
+    text-align: start;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    padding: 50px;
+}
+
+img {
+    object-fit: cover;
+    inline-size: 100%;
+    block-size: auto;
+}
+
+header {
+    inline-size: 100%;
+    text-align: center;
+    /* TO DO this font size needs to respond to shrink when screen width is below 600px  */
+    font-size: 3rem;
+    line-height: 1.2;
+    position: relative;
+}
+
+header img {
+    /* TO DO I think this should be set to a more relative unit, not pixels*/
+    inline-size: 50%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    margin-block: 100px;
+    background-color:#DEBDBB;
+    color: #1C211C;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border: solid 5px #1C211C;
+}
+
+h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-block: 10px;
+}
+
+.mossy-logo-bg {
+    position: absolute;
+    z-index: -1;
+}
+
+.mossy-logo-bg img {
+    object-fit: contain;
+    inline-size: 100%; 
+    mask-image: url('../assets/logo/Circle-Vector.svg');
+}
+
+/* .mossy-logo-bg {
+    background-image: url('../assets/logo/Logo-Mossy-Background.jpeg');
+    background-size: cover;
+} */
+
+.pink-highlight strong {
+    background-color: #EF7A71;
+    /* color:#e7f6e4; */
+    /* TO DO I'd like this to look more like a highlight but am not sure how yet as padding changes the spacing */
+}

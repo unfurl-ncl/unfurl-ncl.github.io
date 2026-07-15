@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #002810;
+    font-family: 'Cascadia Code', 'Consolas', 'Courier New', Courier, monospace;
+    font-variant-numeric: slashed-zero;
+    color:#e7f6e4;
+    text-align: start;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin: 0;
+    // padding: 50px;
+}
+
+h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-block: 10px;
+}
+
+
+ul {
+    text-align: start;
+}
+
+li::marker {
+    content: '- ';
+}
+
+img, iframe {
+    display: block;
+    object-fit: cover;
+    max-inline-size: 100%;
+    block-size: auto;
+    margin: auto;
+}
+
+
+header {
+    max-inline-size: 1500px;
+    margin-inline: auto;
+    block-size: 100dvh;
+    min-block-size: 1000px;
+    text-align: center;
+    /* TO DO this font size needs to respond to shrink when screen width is below 600px  */
+    font-size: 3rem;
+    line-height: 1.15;
+}
+
+.header-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div .header-flex {
+    flex: 1;
+    justify-content: center;
+    margin: 8px;
+    margin-inline: auto;
+    padding: 50px;
+}
+
+.primary-navigation {
+    // border: dotted 5px #e7f6e4;
+    // margin: auto;
+    block-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-clip: content-box;
+}
+
+.primary-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-navigation li::marker {
+    content: none;
+}
+
+.primary-navigation a {
+    color: #F54EC2;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+.primary-navigation a:hover, a:focus-visible {
+    color:#DEBDBB;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    max-inline-size: 1500px;
+    margin: 8px;
+    margin-inline: auto;
+    padding: 50px;
+}
+
+section {
+    margin-block: 100px;
+    background-color:#DEBDBB;
+    color: #1C211C;
+    padding: 20px;
+    border: solid 5px #1C211C;
+}
+
+.mossy-logo {
+    position: relative;
+    background-image: url(../../assets/logo/Logo-Mossy-Background.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    mask-image: url('../../assets/logo/Circle-Vector.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 50%;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo-cursive img {
+    /* TO DO I think this should be set to a more relative unit, not pixels although whatever I'll use I need to apply it to the .mossy-logo mask size too*/
+    // display: inline-block;
+    object-fit: contain;
+    position: relative;
+    inline-size: 50%;
+}
+
+
+.two-column-grid {
+    display: grid;
+    @media (width >600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    gap: 20px;
+    place-items: center;
+}
+
+.two-column-grid img {
+    width: 95%;
+    border: solid #1C211C 5px;
+}
+
+.pink-highlight strong {
+    // background-color: #F54EC2;
+    background-color: #EF7A71;
+    /* color:#e7f6e4; */
+    /* TO DO I'd like this to  look more like a highlight but am not sure how yet as padding changes the spacing */
+}
+
+// BOOK SECTION
+
+.address {
+    list-style: none;
+}
+
+.address li::marker {
+    content: none;
+}
+
+.map {
+    inline-size: auto;
+}
+
+iframe {
+    border:solid 3px #1C211C;
+    height: 300px;
+}
+
+.contact {
+    background: #e7f6e4;
+    margin-inline: auto;
+    padding: 20px;
+    border:solid 3px #1C211C;
+}
+
+form {
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    @media (width >700px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    accent-color: #EF7A71;
+}
+
+fieldset {
+    padding: 0;
+    border: 0;
+}
+
+fieldset input {
+    outline: none;
+}
+
+fieldset:has([required]) legend, 
+.form-group:has(:not([type="radio"])[required]) label {
+    display: flex;
+    gap: .5ch;
+    &::after {
+        content: "*";
+        color:#EF7A71;
+    }
+}
+
+input, textarea, .fieldset:has([type="radio"]) {
+    font: inherit;
+    background-color: #e7f6e4;
+    border: none;
+    outline: solid 3px #1C211C;
+    &:focus-visible {
+        outline-color: #EF7A71;
+        background-color: #e7f6e4;
+    }
+}
+
+button {
+    font: inherit;
+    background-color: #1C211C;
+    color:#e7f6e4;
+    // background:#EF7A71;
+    border: 0;
+}
+
+button:hover, :focus-visible {
+    background: #EF7A71;
+    color: #1C211C;
+}
+
+.form-group:has([type="radio"]:checked) {
+    outline: solid 2px #1C211C;
+    background-color: #1C211C;
+    color: #e7f6e4;
+}
+#consent {
+    outline: none;
+}
+
+.span-all {
+    grid-column: 1/ -1;
+}
+
+.book-grid {
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    @media (width >1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.three-column-grid {
+    display: grid;
+    place-items: start;
+    gap: 20px;
+    @media (width >700px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+fieldset {
+    outline: solid 3px #1C211C;
+    padding: 5px;
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+fieldset label, legend {
+    inline-size: 100%;
+}
+
+.form-group {
+    display: grid;
+}
+
+.form-group:has([type="radio"], [type="checkbox"]) {
+    display: flex;
+    gap: 1ch;
+}
+
+textarea {
+    box-sizing:content-box;
+    height: 5lh;
+    resize: block;
+}
+

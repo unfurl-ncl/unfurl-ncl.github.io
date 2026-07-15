@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-variant-numeric: slashed-zero;
+  color: #e7f6e4;
+  text-align: start;
+  background-color: #002810;
+  margin: 0;
+  font-family: Cascadia Code, Consolas, Courier New, Courier, monospace;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  margin-block: 10px;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+ul {
+  text-align: start;
+}
+
+li::marker {
+  content: "- ";
+}
+
+img, iframe {
+  object-fit: cover;
+  block-size: auto;
+  max-inline-size: 100%;
+  margin: auto;
+  display: block;
+}
+
+header {
+  text-align: center;
+  block-size: 100dvh;
+  min-block-size: 1000px;
+  max-inline-size: 1500px;
+  margin-inline: auto;
+  font-size: 3rem;
+  line-height: 1.15;
+}
+
+.header-flex {
+  flex-direction: column;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+div .header-flex {
+  flex: 1;
+  justify-content: center;
+  margin: 8px;
+  margin-inline: auto;
+  padding: 50px;
+}
+
+.primary-navigation {
+  background-clip: content-box;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  block-size: 100%;
+  display: flex;
+}
+
+.primary-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.primary-navigation li::marker {
+  content: none;
+}
+
+.primary-navigation a {
+  color: #f54ec2;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+.primary-navigation a:hover, a:focus-visible {
+  color: #debdbb;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  max-inline-size: 1500px;
+  margin: 8px;
+  margin-inline: auto;
+  padding: 50px;
+}
+
+section {
+  color: #1c211c;
+  background-color: #debdbb;
+  border: 5px solid #1c211c;
+  margin-block: 100px;
+  padding: 20px;
+}
+
+.mossy-logo {
+  background-image: url("Logo-Mossy-Background.4d657882.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  place-content: center;
+  position: relative;
+  mask-image: url("Circle-Vector.33bb18aa.svg");
+  mask-position: center;
+  mask-size: 50%;
+  mask-repeat: no-repeat;
+}
+
+.logo-cursive img {
+  object-fit: contain;
+  inline-size: 50%;
+  position: relative;
+}
+
+.two-column-grid {
+  display: grid;
+}
+
+@media (width > 600px) {
+  .two-column-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.two-column-grid {
+  place-items: center;
+  gap: 20px;
+}
+
+.two-column-grid img {
+  border: 5px solid #1c211c;
+  width: 95%;
+}
+
+.pink-highlight strong {
+  background-color: #ef7a71;
+}
+
+.address {
+  list-style: none;
+}
+
+.address li::marker {
+  content: none;
+}
+
+.map {
+  inline-size: auto;
+}
+
+iframe {
+  border: 3px solid #1c211c;
+  height: 300px;
+}
+
+.contact {
+  background: #e7f6e4;
+  border: 3px solid #1c211c;
+  margin-inline: auto;
+  padding: 20px;
+}
+
+form {
+  gap: 1rem;
+  display: grid;
+}
+
+@media (width > 700px) {
+  form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+form {
+  accent-color: #ef7a71;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+fieldset input {
+  outline: none;
+}
+
+fieldset:has([required]) legend, .form-group:has(:not([type="radio"])[required]) label {
+  gap: .5ch;
+  display: flex;
+}
+
+fieldset:has([required]) legend:after, .form-group:has(:not([type="radio"])[required]) label:after {
+  content: "*";
+  color: #ef7a71;
+}
+
+input, textarea, .fieldset:has([type="radio"]) {
+  font: inherit;
+  background-color: #e7f6e4;
+  border: none;
+  outline: 3px solid #1c211c;
+}
+
+input:focus-visible, textarea:focus-visible, .fieldset:has([type="radio"]):focus-visible {
+  background-color: #e7f6e4;
+  outline-color: #ef7a71;
+}
+
+button {
+  font: inherit;
+  color: #e7f6e4;
+  background-color: #1c211c;
+  border: 0;
+}
+
+button:hover, :focus-visible {
+  color: #1c211c;
+  background: #ef7a71;
+}
+
+.form-group:has([type="radio"]:checked) {
+  color: #e7f6e4;
+  background-color: #1c211c;
+  outline: 2px solid #1c211c;
+}
+
+#consent {
+  outline: none;
+}
+
+.span-all {
+  grid-column: 1 / -1;
+}
+
+.book-grid {
+  place-items: center;
+  gap: 20px;
+  display: grid;
+}
+
+@media (width > 1000px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.three-column-grid {
+  place-items: start;
+  gap: 20px;
+  display: grid;
+}
+
+@media (width > 700px) {
+  .three-column-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+fieldset {
+  outline: 3px solid #1c211c;
+  block-size: 100%;
+  inline-size: 100%;
+  padding: 5px;
+}
+
+fieldset label, legend {
+  inline-size: 100%;
+}
+
+.form-group {
+  display: grid;
+}
+
+.form-group:has([type="radio"], [type="checkbox"]) {
+  gap: 1ch;
+  display: flex;
+}
+
+textarea {
+  box-sizing: content-box;
+  resize: block;
+  height: 5lh;
+}
+/*# sourceMappingURL=Unfurl-Website.b10d73a7.css.map */
