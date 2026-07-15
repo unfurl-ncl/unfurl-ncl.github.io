@@ -141,7 +141,7 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
     gap: 20px;
-    place-items: center;
+    place-items: start;
 }
 
 .two-column-grid img {
@@ -157,22 +157,66 @@ section {
 }
 
 // BOOK SECTION
+.span-all {
+    grid-column: 1/ -1;
+}
+
+.book-grid {
+    display: grid;
+    justify-items: start;
+    align-items: center;;
+    gap: 20px;
+    @media (width >1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.three-column-grid {
+    display: grid;
+    place-items: start;
+    justify-items: start;
+    gap: 20px;
+    @media (width >700px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.book-flex {
+    display: flex;
+    block-size: 100%;
+    inline-size: 100%;
+    flex-direction: column;
+    justify-content: start;
+    gap: 50px;
+}
+
+.location-flex {
+    display: flex;
+    block-size: 100%;
+    inline-size: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
 
 .address {
     list-style: none;
+    align-content: end;
 }
 
 .address li::marker {
     content: none;
 }
 
+
 .map {
-    inline-size: auto;
+    block-size: 100%;
 }
 
 iframe {
     border:solid 3px #1C211C;
-    height: 300px;
+    inline-size:100%;
+    block-size: 100%;
 }
 
 .contact {
@@ -240,32 +284,11 @@ button:hover, :focus-visible {
     background-color: #1C211C;
     color: #e7f6e4;
 }
+
 #consent {
     outline: none;
 }
 
-.span-all {
-    grid-column: 1/ -1;
-}
-
-.book-grid {
-    display: grid;
-    place-items: center;
-    gap: 20px;
-    @media (width >1000px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-.three-column-grid {
-    display: grid;
-    place-items: start;
-    gap: 20px;
-    @media (width >700px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
 fieldset {
     outline: solid 3px #1C211C;
