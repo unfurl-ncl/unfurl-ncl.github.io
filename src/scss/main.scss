@@ -1,7 +1,24 @@
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('../../assets/font/CascadiaCode-Bold.woff2') format('woff2'),
+        url('../../assets/font/CascadiaCode-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('../../assets/font/CascadiaCode-Regular.woff2') format('woff2'),
+        url('../../assets/font/CascadiaCode-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
-
 
 body {
     background-color: #002810;
@@ -136,6 +153,11 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
+    @media (width <600px) {
+        @supports (::selection) {
+            background-attachment: scroll;
+        }
+    }
     mask-image: url('../../assets/logo/Circle-Vector.svg');
     mask-repeat: no-repeat;
     mask-position: center;
@@ -363,17 +385,17 @@ footer .two-column-grid, .logo-cursive-footer {
     background-size: auto;
 }
 
-.logo-cursive-footer:after{
-    content:"";
-    position: fixed;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    height: 100dvh;
-    z-index: -1;
-    background: url(../../assets/logo/Logo-Mossy-Background.png);
-    background-size: cover;
-}
+// .logo-cursive-footer:after{
+//     content:"";
+//     position: fixed;
+//     bottom: 0;
+//     // left: 0;
+//     // right: 0;
+//     height: 100dvh;
+//     z-index: -1;
+//     background: url(../../assets/logo/Logo-Mossy-Background.png);
+//     background-size: cover;
+// }
 
 .circle-bg {
     block-size: 20dvh;
