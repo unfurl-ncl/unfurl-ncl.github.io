@@ -153,8 +153,8 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
-    @media (width <600px) {
-        @supports (hanging-punctuation: initial) {
+    @supports (hanging-punctuation: initial) {
+        @media (width <600px) {
             background-attachment: scroll;
         }
     }
@@ -379,11 +379,11 @@ footer .two-column-grid, .logo-cursive-footer {
     padding-inline: 50px;
     background-image: url(../../assets/logo/Logo-Mossy-Background.png);
     background-attachment: fixed;
-    @media (width <600px) {
-        @supports (hanging-punctuation: initial) {
-            background-attachment: scroll;
-        }
-    }
+    // @media (width <600px) {
+    //     @supports (hanging-punctuation: initial) {
+    //         background-attachment: scroll;
+    //     }
+    // }
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 45%;
