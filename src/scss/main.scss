@@ -153,11 +153,11 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
-    // @supports (hanging-punctuation: initial) {
-    //     @media (width <600px) {
-    //         background-attachment: scroll;
-    //     }
-    // }
+    @supports (hanging-punctuation: initial) {
+        @media (width <600px) {
+            background-attachment: scroll;
+        }
+    }
     mask-image: url('../../assets/logo/Circle-Vector.svg');
     mask-repeat: no-repeat;
     mask-position: center;
@@ -379,11 +379,11 @@ footer .two-column-grid, .logo-cursive-footer {
     padding-inline: 50px;
     background-image: url(../../assets/logo/Logo-Mossy-Background.png);
     background-attachment: fixed;
-    // @media (width <600px) {
-    //     @supports (hanging-punctuation: initial) {
-    //         background-attachment: scroll;
-    //     }
-    // }
+    @media (width <600px) {
+        @supports (hanging-punctuation: initial) {
+            background-attachment: scroll;
+        }
+    }
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 45%;
