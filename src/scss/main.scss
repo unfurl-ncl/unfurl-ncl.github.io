@@ -76,7 +76,6 @@ header {
     block-size: 100dvh;
     min-block-size: 1000px;
     text-align: center;
-    /* TO DO this font size needs to respond to shrink when screen width is below 600px  */
     font-size: 3rem;
     line-height: 1.15;
     @media (width < 700px) {
@@ -347,7 +346,6 @@ button:hover, :focus-visible {
     outline: none;
 }
 
-
 fieldset {
     outline: solid 3px #1C211C;
     padding: 5px;
@@ -397,18 +395,6 @@ footer .two-column-grid, .logo-cursive-footer {
     background-position-y: 45%;
     background-size: auto;
 }
-
-// .logo-cursive-footer:after{
-//     content:"";
-//     position: fixed;
-//     bottom: 0;
-//     // left: 0;
-//     // right: 0;
-//     height: 100dvh;
-//     z-index: -1;
-//     background: url(../../assets/logo/Logo-Mossy-Background.png);
-//     background-size: cover;
-// }
 
 .circle-bg {
     block-size: 20dvh;
@@ -460,7 +446,6 @@ footer a {
 }
 
 footer a:hover, a:focus-visible {
-    // color:#1C211C;
     text-transform:none;
     text-decoration: none;
 }
@@ -468,7 +453,6 @@ footer a:hover, a:focus-visible {
 // Privacy Policy
 
 header.privacy-policy-header {
-    // background-color: #e7f6e4;
     max-inline-size: 100%;
     margin: 0;
     block-size: auto;
